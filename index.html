@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nev's Cluster - ARK Server</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333; /* Greyish background */
+            color: #f1f1f1; /* Light grey text for contrast */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background with slight transparency */
+            border-radius: 15px;
+        }
+        h1 {
+            color: #00bcd4; /* Blueish color */
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .nav a {
+            padding: 12px 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            background: #007b8d; /* Dark blue color */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .nav a:hover {
+            background: #004c56; /* Darker blue when hovering */
+        }
+        .section {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            background: #222; /* Darker background for the sections */
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        .active {
+            display: block;
+        }
+        .server-list p {
+            background: #007b8d; /* Dark blue background for the server list items */
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        h2 {
+            color: #00bcd4; /* Blue for section headings */
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Nev's Cluster</h1>
+        <div class="nav">
+            <a onclick="showSection('rules')">Rules</a>
+            <a onclick="showSection('rates')">Rates</a>
+            <a onclick="showSection('server-list')">Server List</a>
+            <a href="newsLettser.html">News Article</a>
+            <a href="Flyer.png">Flyer</a>
+            <a href="https://discord.gg/7stYnwPrPw">Join Discord</a>
+        </div>
+        
+        <div id="rules" class="section active">
+            <h2>Server Rules</h2>
+            <p><strong>No Blocking:</strong> Keep artifacts, obelisks, caves, and key resource spawns accessible.</p>
+            <p><strong>No Structure Spam:</strong> Avoid excessive foundations, pillars, or blocking key areas.</p>
+            <p><strong>No Cheating/Exploiting:</strong> No hacks, dupes, or unintended glitches.</p>
+            <p><strong>Be Respectful:</strong> No griefing, stealing, drowning, or toxic behavior.</p>
+        </div>
+        
+        <div id="rates" class="section">
+            <h2>Server Rates</h2>
+            <p><strong>x10</strong> Harvest | <strong>x1</strong> XP | <strong>x250</strong> Baby Maturity | <strong>Instant Imprint</strong> | <strong>x8</strong> Taming</p>
+        </div>
+        
+        <div id="server-list" class="section">
+            <h2>Server List</h2>
+            <div class="server-list">
+                <p><strong>Astraeos:</strong> 85.190.136.135:5430</p>
+                <p><strong>The Island:</strong> 31.214.196.17:5090</p>
+                <p><strong>The Center:</strong> 85.190.136.218:5180</p>
+                <p><strong>Scorched Earth:</strong> 85.190.136.197:5780</p>
+                <p><strong>Extinction:</strong> 85.190.136.184:5860</p>
+                <p><strong>Aberration:</strong> 31.214.196.3:5180</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
